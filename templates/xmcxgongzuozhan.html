@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>小明查询方案小组主页</title>
+        <link rel="stylesheet" href="/static/layui/css/layui.css"/>
+        <script src="/static/layui/layui.js"></script>
+    </head>
+    <body>
+        <div class="layui-container">
+                <h2>工作站文件管理</h2>
+                <button type="button" class="layui-btn layui-btn-primary" lay-on="alert">pass.txt</button>
+                <button type="button" class="layui-btn layui-btn-primary" lay-on="log22">log22.txt</button>
+                <button type="button" class="layui-btn layui-btn-primary" lay-on="log21">log21.txt</button>
+                <button type="button" class="layui-btn layui-btn-primary" lay-on="log6463">承包商.txt</button>
+                <button type="button" class="layui-btn layui-btn-primary" lay-on="log6473">二部验证.dec</button>
+                <script>
+                    layui.use(function(){
+                      var layer = layui.layer;
+                      var util = layui.util;
+                      // 批量事件
+                      util.on('lay-on', {
+                        alert: function(){
+                          layer.alert('我再给本项目的新成员说一句\n这是我最后重复管理员账户了\n密码是lrx123456\n授权地址是 "/accept" -Xiaoming');},
+                        log22: function(){
+                            layer.alert('日志\n8.2\n验证测试\n尝试使用UAAA检索漏洞\n未发现问题');},
+                        log21: function(){
+                            layer.alert('日志\n8.1\n我们添加的验证系统非常成功\n成功阻止了未授权用户访问\n想要访问只需要到我们的授权地址登录即可');},
+                        log6463: function(){
+                            layer.alert('我收到我们的搜素承包商传回来的权限二部验证密码了 我已经将它放在这里了 在 "/EnTh" 是验证页面地址 -Verle');}
+                        ,log6473: function(){
+                            layer.alert('这是一个加密文件，需要密码访问');}
+                        ,})})
+                </script>
+    </body>
+</html>

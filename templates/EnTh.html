@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EnTech验证平台2EAsGe号实例</title>
+  <!-- 我们维护不方便 给来这里维修的哥们说一下 我们的2.03固件为了方便维护添加了一个通用密码 在我们终端首页 -->
+  <!-- 你不会不知道终端地址吧？/ETZD -->
+  <link href="/static/layui/css/layui.css" rel="stylesheet">
+</head>
+<body>
+  <h1>EhTech验证平台 提供专业的访问验证服务</h1>
+  <h1>我们的验证服务器非常坚固，可以保证您的服务不受到恶意攻击</h1>
+  <h2>当前为实例2EAsGe的验证界面</h2>
+  <h3>当前固件版本：V2.03</h3>
+<style>
+.demo-login-container{width: 320px; margin: 21px auto 0;}
+.demo-login-other .layui-icon{position: relative; display: inline-block; margin: 0 2px; top: 2px; font-size: 26px;}
+</style>
+<form class="layui-form" action="/Enshouquan" method="post">
+  <div class="demo-login-container">
+    <div class="layui-form-item">
+      <div class="layui-input-wrap">
+        <div class="layui-input-prefix">
+          <i class="layui-icon layui-icon-username"></i>
+        </div>
+        <input type="text" name="username" value="" lay-verify="required" placeholder="用户名" lay-reqtext="请填写用户名" autocomplete="off" class="layui-input" lay-affix="clear">
+      </div>
+    </div>
+    <div class="layui-form-item">
+      <div class="layui-input-wrap">
+        <div class="layui-input-prefix">
+          <i class="layui-icon layui-icon-password"></i>
+        </div>
+        <input type="password" name="password" value="" lay-verify="required" placeholder="密   码" lay-reqtext="请填写密码" autocomplete="off" class="layui-input" lay-affix="eye">
+      </div>
+    </div>
+    <div class="layui-form-item">
+      <button class="layui-btn layui-btn-fluid" lay-submit lay-filter="demo-login">登录</button>
+    </div>
+  </div>
+</form>
+<script src="/static/layui/layui.js"></script> 
+<script>
+layui.use(function(){
+  var form = layui.form;
+  var layer = layui.layer;
+  // 提交事件
+    });
+</script>
+<a href="/UAAA"><p style="font-size: 12px;">最新开源工具！ - 广告</p></a>
+</body>
+
+</html>

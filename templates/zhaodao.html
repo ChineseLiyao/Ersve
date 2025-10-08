@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find in SQL</title>
+    <link href="/static/layui/css/layui.css" rel="stylesheet">
+    <style>
+        #center-text {
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            align-items: center;     /* 垂直居中 */
+            height: 100vh;           /* 设置元素高度等于视口（viewport）高度，确保在不同屏幕大小上都能自动适应 */
+        }
+        .flicker {
+            animation: fadeInOut 2s linear infinite;
+        }
+        @keyframes fadeInOut {
+            from { opacity: 1; }
+            50% { opacity: 0.1; }
+            to { opacity: 1; }
+        }
+        .glitch {
+            display: inline-block;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="flicker">
+        <span id="center-text">
+            <span class="glitch" style="color: #ff0000;font-size: 1200%;">Find</span>
+        </span>
+    </div>
+    <script>
+        function getRandomChar() {
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVW!@#$%^&*()(*&^%^$#@!":>?<{}[];XYZabcdefghijklmnopqrstuvwxyz0123456789';
+            return chars.charAt(Math.floor(Math.random() * chars.length));
+        }
+
+        function glitchEffect() {
+            const glitchElement = document.querySelector('.glitch');
+            const originalText = glitchElement.textContent;
+
+            setInterval(() => {
+                const glitchedText = Array.from(originalText).map(char => Math.random() < 0.2 ? getRandomChar() : char).join('');
+                glitchElement.textContent = glitchedText;
+
+                // 0.1秒后恢复原始文本
+                setTimeout(() => {
+                    glitchElement.textContent = originalText;
+                }, 100);
+            }, 100);
+        }
+
+        document.addEventListener('DOMContentLoaded', glitchEffect);
+    </script>
+    <script>
+            const targetUrl = '/sessionxmcx';
+            setTimeout(() => {
+             window.location.href = targetUrl;
+            }, 5000); // 这里是4000毫秒等于4秒
+    </script>
+</html>
+</body>
+</html>
